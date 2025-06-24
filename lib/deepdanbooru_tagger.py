@@ -14,6 +14,7 @@ class DeepDanbooruTagger:
             Image.open(file_path)
             return True
         except IOError:
+            print(f"Error: {file_path} is not a valid image file.")
             return False
 
     def preprocess_image(self, image_path):
