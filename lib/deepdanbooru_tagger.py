@@ -75,6 +75,7 @@ class DeepDanbooruTagger:
             tags_file_path = os.path.join(os.path.dirname(image_path), f'{base_file_name}.txt')
             with open(tags_file_path, 'w') as f:
                 tags_string = ', '.join(final_tags)
+                print(f'Writing tags {tags_string} to {tags_file_path}')
                 f.write(tags_string)
             
             # Optionally output results in a txt file if interrogate is enabled
